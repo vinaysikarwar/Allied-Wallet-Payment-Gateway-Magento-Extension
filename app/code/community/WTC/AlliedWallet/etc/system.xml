@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<config>
+	<sections>
+		<payment>
+			<groups>
+				<alliedwallet translate="label" module="paygate">
+					<label>Allied Wallet</label>
+					<sort_order>1</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						<active translate="label">
+							<label>Enabled</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</active>
+						<title translate="label">
+							<label>Title</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</title>
+					
+						<order_desc translate="label">
+							<label>Order Description</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>3</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</order_desc>
+						<order_status translate="label">
+							<label>New order status</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_order_status</source_model>
+							<sort_order>4</sort_order>
+							<show_in_default>2</show_in_default>
+							<show_in_website>2</show_in_website>
+							<show_in_store>0</show_in_store>
+						</order_status>
+
+						<cctypes translate="label">
+							<label>Credit Card Types</label>
+							<frontend_type>multiselect</frontend_type>
+							<source_model>paygate/authorizenet_source_cctype</source_model>
+							<sort_order>7</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</cctypes>
+							
+						<!--test_url translate="label">
+							<label>Test Gateway URL (without https)</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</test_url-->
+						<live_url translate="label">
+							<label>Live Gateway URL (without https)</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>6</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</live_url>
+ 
+						<merchant_id translate="label">
+							<label>Merchant Id</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>8</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</merchant_id>
+						<!--
+						<loginAmex translate="label">
+							<label>Amex Merchant Code</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</loginAmex>
+  						-->
+						<site_id translate="label">
+							<label>Site Id</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>11</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</site_id>
+
+						<!--password translate="label">
+							<label>Merchant Password</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>12</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</password-->
+						<!--test_mode translate="label">
+							<label>Test Mode</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>13</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</test_mode-->
+						<currency translate="label">
+							<label>Accepted Currency</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_currency</source_model>
+							<sort_order>100</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</currency>
+						<allowspecific translate="label">
+							<label>Payment from Applicable Countries</label>
+							<frontend_type>allowspecific</frontend_type>
+							<sort_order>160</sort_order>
+							<source_model>adminhtml/system_config_source_payment_allspecificcountries</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</allowspecific>
+						<specificcountry translate="label">
+							<label>Payment from Specific Countries</label>
+							<frontend_type>multiselect</frontend_type>
+							<sort_order>170</sort_order>
+							<source_model>adminhtml/system_config_source_country</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</specificcountry>
+
+					</fields>
+				</alliedwallet>
+			</groups>
+		</payment>
+	</sections>
+</config>
